@@ -1,21 +1,25 @@
 .growthDiaryArea {
-  @apply sm:min-h-0 grow w-full flex flex-col gap-4;
+  @apply min-h-0 grow w-full flex flex-col gap-4;
 }
 
 .growthDiaryArea {
+  figure.noBabyList {
+    @apply relative
+    flex justify-center items-center
+    bg-white border-2 border-blue-3 rounded-2xl;
+  }
+
   figure.noBabyList,
   .graphBtnArea {
-    @apply grow flex flex-col justify-center gap-2
-    sm:p-4 sm:bg-blue-1 sm:rounded-2xl;
-    @apply sm:min-h-0 sm:flex-row sm:gap-4;
+    @apply grow flex flex-wrap flex-col justify-center gap-2 overflow-hidden
+    min-h-0;
 
     .chartImgWrapper {
-      @apply w-full grow flex bg-white border-2 border-blue-3 rounded-2xl
-      sm:min-h-0;
-
-      img {
-        @apply sm:w-full sm:h-full object-fill;
-      }
+        @apply min-h-0 flex sm:self-start;
+  
+        img {
+          @apply min-h-56 w-full h-full object-fill;
+        }
     }
   }
 
@@ -27,16 +31,17 @@
     @apply flex flex-col gap-4;
   }
 
-  // buttonArea
   .buttonArea {
-    @apply flex justify-between items-center
-    sm:w-[30%] sm:flex-col sm:justify-between sm:items-end sm:gap-2;
+    @apply absolute w-full h-full p-6
+    flex flex-col justify-center items-center gap-4
+    bg-white/10 backdrop-blur-[2px] border border-gray-1 rounded-2xl 
+    xs:top-6 xs:right-6 xs:w-auto xs:h-auto xs:items-end xs:backdrop-blur-[4px] xs:shadow-md;
 
-    .text {
-      @apply grow text-gray-8 font-md;
+    p {
+      @apply text-gray-8 drop-shadow-sm;
 
       span {
-        @apply text-green-8;
+        @apply font-bd text-green-7;
       }
     }
 

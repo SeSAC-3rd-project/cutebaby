@@ -1,5 +1,5 @@
 header {
-  @apply sm:min-h-20 bg-white border-t border-gray-2;
+  @apply min-h-20 bg-white border-t border-gray-2;
   @apply sm:border-t-0 sm:border-b-2 sm:border-gray-6;
 
   .centerWrapper {
@@ -29,7 +29,7 @@ header {
 
       p {
         @apply text-gray-4 text-2xs font-bd;
-        @apply sm:text-gray-5 sm:text-bs sm:text-sm sm:font-md;
+        @apply sm:text-gray-5 sm:text-bs sm:font-md;
 
         &.active {
           @apply text-gray-8;

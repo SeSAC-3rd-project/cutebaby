@@ -1,4 +1,4 @@
-$visual-home: url("../../../public/img/visuals/visual_home_ggomul_big.svg") no-repeat right calc(100% + 24px);
+$visual-home: url("../../../public/img/visuals/visual_home_ggomul_big.svg") no-repeat calc(100% - 24px) calc(100% + 16px);
 $gradient-w-y: linear-gradient(180deg, #FFF 0%, theme('colors.yellow.1') 100%) center;
 
 .topArea {
@@ -10,11 +10,12 @@ $gradient-w-y: linear-gradient(180deg, #FFF 0%, theme('colors.yellow.1') 100%) c
   // 768px 이상일 때
   @media (min-width: 768px) {
       background-size: 168px, 0;
+      background-position: right calc(100% + 24px), center;
   }
 
   .greeting {
     @apply text-xl font-md;
-    @apply xs:text-2xl;
+    @apply sm:text-2xl;
 
     strong {
       @apply font-bd;

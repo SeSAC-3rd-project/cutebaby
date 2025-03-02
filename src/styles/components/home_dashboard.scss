@@ -2,6 +2,6 @@
 @import './home_vaccinationArea.scss';
 
 .dashboard {
-    @apply sm:min-h-0 grow px-6 py-8 flex flex-col gap-6 items-center;
+    @apply min-h-0 grow px-6 pt-6 pb-12 flex flex-col gap-6 items-center;
     @apply sm:bg-white sm:border-2 sm:border-gray-6 sm:rounded-[32px] sm:p-6;
 }

@@ -14,7 +14,7 @@ body {
 
 // 전역 root div 스타일 // header를 제외한 나머지 영역
 #root {
-  @apply sm:min-h-0 grow flex flex-col;
+  @apply min-h-0 grow flex flex-col;
 
   // 768px 이하일 때
   @media (max-width: 768px) {
@@ -30,16 +30,25 @@ body {
 header,
 main {
   @apply w-full flex justify-center;
-}
 
-.centerWrapper {
-  min-width: 390px;
-  max-width: 1280px;
-  @apply grow w-full h-full flex;
+  .centerWrapper {
+    @apply min-w-[390px] max-w-[1280px] w-full min-h-0 h-full grow flex flex-wrap
+    sm:flex-nowrap;
+  }
 }
 
 main {
   @apply grow items-start;
+
+  @media (max-width: 768px) {
+    .centerWrapper {
+      @apply overflow-x-hidden overflow-y-scroll;
+    }
+  }
+}
+
+footer {
+  @apply min-h-20 grow flex justify-center items-center text-gray-6;
 }
 
 // 제목 태그 스타일

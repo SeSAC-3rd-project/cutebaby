@@ -2,5 +2,5 @@
 @import "../components/home_dashboard.scss";
 
 .userArea {
-  @apply sm:min-h-0 grow flex flex-col;
+  @apply min-h-0 grow flex flex-col;
 }

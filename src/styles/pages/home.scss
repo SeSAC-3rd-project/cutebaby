@@ -4,7 +4,7 @@
 // 홈페이지 style
 
 main.home {
-  @apply sm:min-h-0 sm:mt-12;
+  @apply min-h-0 sm:mt-12;
 
   .centerWrapper {
     @apply gap-6;
